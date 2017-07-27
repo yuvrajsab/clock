@@ -1,0 +1,227 @@
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+// Colors
+$grey : #fdfdfd;
+
+body
+  position: relative
+  font-family: 'Josefin Sans', sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  background-color: $grey
+  ::selection
+    background-color: black
+    color: white
+
+//text
+h1
+  text-transform: uppercase
+  font-size: 85px
+  text-shadow: 4px 7px 2px rgba(0,0,0,0.1)
+  text-align: center
+  color: #444444
+  letter-spacing: 15px
+  margin-top: auto
+  //text-decoration: underline
+
+footer
+  position: fixed
+  bottom: 0
+  left: 0
+  right: 0
+  padding: 10px
+  text-align: center
+
+//day
+#time
+  font-size: 50px
+  position: fixed
+  top: 50%
+  right: 0
+  transform: translateY(-50%) rotate(90deg)
+
+//Clock
+.clock-wrapper
+
+.clock-inner-circle
+  width: 270px
+  height: 270px
+  position: relative
+  //background-color: $grey
+  border-radius: 100%
+  border: 2px solid
+  border-color: black
+
+.clock-outter-circle
+  width: 300px
+  height: 300px
+  display: flex
+  justify-content: center
+  align-items: center
+  //background-color: $grey
+  position: relative
+  border-radius: 100%
+  margin: auto
+  border: 2px solid
+  border-color: black
+
+.left-leg
+  width: 50px
+  height: 20px
+  position: absolute
+  bottom: -5px
+  left: 0
+  transform: skewY(-30deg)
+  background-color: black
+
+.right-leg
+  width: 50px
+  height: 20px
+  position: absolute
+  bottom: -5px
+  right: 0
+  transform: skewY(30deg)
+  background-color: black
+
+.alarm-left
+  width: 70px
+  height: 30px
+  background-color: black
+  position: absolute
+  top: 15px
+  left: -10px
+  transform: rotate(-50deg)
+  animation-name: alarm
+  animation-duration: 5s
+  animation-timing-function: linear
+  animation-iteration-count: infinite
+  animation-direction: normal
+  animation-fill-mode: both
+
+.alarm-right
+  width: 70px
+  height: 30px
+  background-color: black
+  position: absolute
+  top: 15px
+  right: -10px
+  transform: rotate(50deg)
+
+.switch
+  width: 25px
+  height: 20px
+  background-color: black
+  position: absolute
+  top: -25px
+  cursor: pointer
+  transform: rotate(90deg)
+  transition: background-color 0.3s ease-in
+  &:hover
+    background-color: white
+    outline: 1px solid black
+
+.line-top
+  width: 20px
+  height: 10px
+  //transform: rotate(90deg)
+  background-color: black
+  position: absolute
+  top: -5px
+  left: 50%
+  transform: translateX(-50%) rotate(90deg)
+
+.line-left
+  width: 20px
+  height: 10px
+  //transform: rotate(90deg)
+  background-color: black
+  position: absolute
+  top: 50%
+  left: -10px
+  transform: translateY(-50%)
+
+.line-right
+  width: 20px
+  height: 10px
+  //transform: rotate(90deg)
+  background-color: black
+  position: absolute
+  top: 50%
+  right: -10px
+  transform: translateY(-50%)
+
+.line-bottom
+  width: 20px
+  height: 10px
+  //transform: rotate(90deg)
+  background-color: black
+  position: absolute
+  bottom: -5px
+  left: 50%
+  transform: translateX(-50%) rotate(90deg)
+
+
+#hour-hand
+  width: 10px
+  height: 100px
+  top: 13%
+  left: 50%
+  transform: translateX(-50%)
+  transform-origin: 50% 100%
+  background-color: black
+  position: absolute
+  z-index: 4
+
+#minute-hand
+  width: 8px
+  height: 120px
+  top: 6%
+  left: 50%
+  transform: translateX(-50%)
+  transform-origin: 50% 100%
+  background-color: black
+  position: absolute
+  z-index: 3
+
+#second-hand
+  width: 5px
+  height: 80px
+  top: 20%
+  left: 50%
+  //transform: translateX(-50%) rotate(90deg)
+  //transform: translateY(100px)
+  transform: translateX(-50%)
+  transform-origin: 50% 100%
+  background-color: black
+  position: absolute
+  z-index: 2
+
+.note
+  border-left: 3px solid #FF4136
+  background-color: rgba(179,58,58,0.5)
+  height: 30px
+  padding: 5px
+  display: flex
+  align-items: center
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  span
+    margin-left: 10px
+    vertical-align: middle
+    font-size: 18px
+
+
+
+
+@media only screen and (max-width: 768px)
+  #time
+    transform: rotate(0deg)
+    top: 80%
+  .note
+    display: block
+  h1
+    margin-top: 10%

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="clock is a repository on github basically its a analog clock that shows time and date and day">
+    <meta name="Keywords" content="clock,github,analog,analog clock,time,date,day,year,month,second">
+    <title>Clock</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/clock.js"></script>
+    <script type="text/javascript" src="js/alarm.js"></script>
+  </head>
+  <body>
+    <h1>clock</h1>
+    <div id="time"></div>
+
+    <!-- clock -->
+    <div class="clock-wrapper">
+      <div class="clock-outter-circle">
+
+        <div class="switch" onclick="callfirst()"></div>
+        <div class="alarm-left"></div>
+        <div class="alarm-right"></div>
+
+          <div class="clock-inner-circle">
+
+            <div class="line-top"></div>
+            <div class="line-left"></div>
+            <div class="line-right"></div>
+            <div class="line-bottom"></div>
+
+            <div id="hour-hand"></div>
+            <div id="minute-hand"></div>
+            <div id="second-hand"></div>
+
+          </div>
+
+        <div class="left-leg"></div>
+        <div class="right-leg"></div>
+
+      </div>
+    </div>
+
+    <!-- audio -->
+    <audio id="alarmtune">
+      <source src="audio/Ringing-clock.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- note -->
+    <div class="note">
+      <span>Best viewed on Desktop</span>
+    </div>
+
+  <footer>
+    Designed & Developed by <a href="#">YS</a>
+  </footer>
+
+  </body>
+</html>
